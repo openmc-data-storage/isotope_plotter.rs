@@ -6,7 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-plotly = { path = "../../plotly", features = ["wasm"] }
+plotly = { version = "0.8.3", features = ["wasm"] }
 yew = "0.19.0"
 yew-hooks = "0.1.56"
 log = "0.4.6"
