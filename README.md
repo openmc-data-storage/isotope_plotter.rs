@@ -1,2 +1,3 @@
-# isotope_plotter.rs
-A prototype Rust WASM nuclear data plotter for nuclide cross sections
+Work in progress
+
+https://openmc-data-storage.github.io/isotope_plotter.rs/
