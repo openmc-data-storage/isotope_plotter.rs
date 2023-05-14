@@ -1,9 +1,7 @@
 name: Continuous deployment
 on:
   workflow_run:
-    branches: [main]
-    workflows: [Continuous integration]
-    types: [completed]
+    workflow_dispatch:
 
 jobs:
   release:
@@ -23,7 +21,7 @@ jobs:
         rustup target add wasm32-unknown-unknown
         trunk build --release
 
-      - uses: peaceiris/actions-gh-pages@v3.9.3
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          folder: dist
