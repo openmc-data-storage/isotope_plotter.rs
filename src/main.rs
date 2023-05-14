@@ -1,12 +1,31 @@
 use yew::prelude::*;
 
-#[function_component(App)]
-fn app() -> Html {
-    html! {
-        <h1>{ "Hello World" }</h1>
+struct Index;
+impl Component for Index {
+    type Message = ();
+    type Properties = ();
+
+    fn create(_: Self::Properties, _: ComponentLink<Self>) -> Self {
+        Self
+    }
+
+    fn update(&mut self, _: Self::Message) -> ShouldRender {
+        false
+    }
+
+    fn change(&mut self, _: Self::Properties) -> ShouldRender {
+        false
+    }
+
+    fn view(&self) -> Html {
+        html! {
+            <div>
+                { "Hello, World!" }
+            </div>
+        }
     }
 }
 
 fn main() {
-    yew::Renderer::<App>::new().render();
+    yew::start_app::<Index>();
 }
