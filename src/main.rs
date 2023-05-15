@@ -20,7 +20,7 @@ impl Component for Index {
     fn view(&self) -> Html {
         html! {
             <div>
-                { "Hello, World! WASM Rust GH pages" }
+                { "Hello, World! This is working. WASM Rust GH pages" }
             </div>
         }
     }
